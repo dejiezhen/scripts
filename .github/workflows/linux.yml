@@ -21,4 +21,5 @@ jobs:
                 linuxCommitHash=$(git rev-parse HEAD:linux)
                 wget https://github.com/dejiezhen/linux/archive/${linuxCommitHash).zip
                 unzip linux-$(linuxCommitHash).zip
+                ./build-linux.sh linux-$linuxCommitHash) tinyconfig
             
