@@ -1,0 +1,17 @@
+name: linux
+
+on: 
+    push:
+        paths: 
+            -'linux'
+
+
+jobs:
+    build: 
+        runs-on: ubuntu-20.04
+        steps: 
+            -name: Checking Clean Build of Downstream Linux Tree
+            run: echo 'hello i hope this works'
+            
+            -name: Checking Clean Build 2
+            run: echo 'this is running great'
