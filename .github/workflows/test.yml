@@ -12,5 +12,5 @@ jobs:
     steps: 
       - name: Check out major release
         uses: actions/checkout@v2
-      - name: make test 
+      - name: Make test 
         run: make -C test 

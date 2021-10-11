@@ -20,7 +20,7 @@ jobs:
       run: |
         linuxHash=$(git rev-parse HEAD:linux)
         wget -q https://github.com/dejiezhen/linux/archive/${linuxHash}.zip
-        unzip ${linuxHash}.zip
+        unzip -q ${linuxHash}.zip
     - name: Build linux with tinyconfig
       run: |
         linuxHash=$(git rev-parse HEAD:linux)
