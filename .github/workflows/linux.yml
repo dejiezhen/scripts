@@ -16,12 +16,12 @@ jobs:
         submodules: true          
     - name: Install Dependencies
       run: ./install-deps.sh
-    - name: Download linux and unzip folder
+    - name: Download Linux and unzip folder
       run: |
         linuxHash=$(git rev-parse HEAD:linux)
         wget -q https://github.com/dejiezhen/linux/archive/${linuxHash}.zip
         unzip -q ${linuxHash}.zip
-    - name: Build linux with tinyconfig
+    - name: Build Linux with tinyconfig
       run: |
         linuxHash=$(git rev-parse HEAD:linux)
         ./build-linux.sh linux-${linuxHash} tinyconfig
