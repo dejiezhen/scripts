@@ -17,8 +17,8 @@ jobs:
     - name: Download Linux and unzip folder
       run: |
         linuxHash=$(git rev-parse HEAD:linux)
-        wget -q https://github.com/dejiezhen/linux/archive/${linuxHash}.zip
-        unzip -q ${linuxHash}.zip
+        wget https://github.com/dejiezhen/linux/archive/${linuxHash}.zip
+        unzip ${linuxHash}.zip
     - name: Build Linux with tinyconfig
       run: |
         linuxHash=$(git rev-parse HEAD:linux)
