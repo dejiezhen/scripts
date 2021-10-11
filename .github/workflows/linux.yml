@@ -11,9 +11,7 @@ jobs:
 
     steps:
     - name: Checkout major release
-      uses: actions/checkout@v2 
-      with: 
-        submodules: true          
+      uses: actions/checkout@v2          
     - name: Install Dependencies
       run: ./install-deps.sh
     - name: Download Linux and unzip folder
