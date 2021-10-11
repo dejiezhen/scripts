@@ -7,8 +7,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout major version of release
-    uses: actions/checkout@v2           
+    # Check out major release for job
+    - uses: actions/checkout@v2           
     - name: Install Dependencies
     run: ./install-deps.sh
 
