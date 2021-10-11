@@ -3,7 +3,7 @@ name: linux
 on: 
   push:
     path:
-      - 'linux'
+      - 'linux/**'
 
 jobs:
   build: 
@@ -20,4 +20,7 @@ jobs:
       run: |
         linuxHash=$(git rev-parse HEAD:linux)
         wget https://github.com/dejiezhen/linux/archive/${linuxHash}.zip
+        ls -all
+        unzip linux-${linuxHash}.zip
+        ./build-linux.sh linux-${linuxHash} tinyconfig
          
