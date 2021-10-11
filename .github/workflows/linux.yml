@@ -1,13 +1,17 @@
 name: linux
 
-on: push
+on: 
+  push:
+    path: 
+      - 'linux'
 
 jobs:
   build: 
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
 
     steps:
-    - uses: actions/checkout@v2           
+    - name: Checkout major release
+      uses: actions/checkout@v2           
     - name: Install Dependencies
       run: ./install-deps.sh
 
