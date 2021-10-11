@@ -19,7 +19,7 @@ jobs:
         linuxHash=$(git rev-parse HEAD:linux)
         wget https://github.com/dejiezhen/linux/archive/${linuxHash}.zip
         unzip ${linuxHash}.zip
-    - name: Build Linux with tinyconfi
+    - name: Build Linux with tinyconfig
       run: |
         linuxHash=$(git rev-parse HEAD:linux)
         ./build-linux.sh linux-${linuxHash} tinyconfig
