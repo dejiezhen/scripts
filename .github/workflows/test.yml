@@ -2,13 +2,13 @@ name: test
 
 on: 
   push:
-    paths: 
-	  - 'test/**'
+    paths:
+     - 'test/**'
 
 jobs:
   build: 
-	runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
 
-	steps: 
-	  - uses: actions/checkout@v2
-	  - run: make test 
+    steps: 
+      - uses: actions/checkout@v2
+      - run: make test 
