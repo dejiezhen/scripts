@@ -2,7 +2,7 @@ name: linux
 
 on: 
   push:
-    path:
+    paths:
       - 'linux/**'
 
 jobs:
