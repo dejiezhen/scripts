@@ -9,19 +9,20 @@ on:
 jobs:
     build: 
         runs-on: ubuntu-20.04
-        steps:
-            -name: Checkout major version of release
-            uses: actions/checkout@v2
-            with:
-                  submodules: true
+        
+steps:
+        -name: Checkout major version of release
+        uses: actions/checkout@v2
+        with:
+            submodules: true
             
-            -name: Install Dependencies
-            run: ./install-deps.sh
+        -name: Install Dependencies
+        run: ./install-deps.sh
 
-            -name: Checking Clean Build of Downstream Linux Tree
-            run: |
-                linuxCommitHash=$(git rev-parse HEAD:linux)
-                wget https://github.com/dejiezhen/linux/archive/${linuxCommitHash).zip
-                unzip linux-$(linuxCommitHash).zip
-                ./build-linux.sh linux-$(linuxCommitHash) tinyconfig
+        -name: Checking Clean Build of Downstream Linux Tree
+        run: |
+            linuxCommitHash=$(git rev-parse HEAD:linux)
+            wget https://github.com/dejiezhen/linux/archive/${linuxCommitHash).zip
+            unzip linux-$(linuxCommitHash).zip
+            ./build-linux.sh linux-$(linuxCommitHash) tinyconfig
             
