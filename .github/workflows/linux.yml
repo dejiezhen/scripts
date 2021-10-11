@@ -17,7 +17,7 @@ jobs:
     - name: Check Clean Build of Downstream Linux Tree
       run: |
           linuxCommitHash=$(git rev-parse HEAD:linux) 
-          wget https://github.com/dejiezhen/linux/archive/${linuxCommitHash).zip
+          wget https://github.com/dejiezhen/linux/archive/$(linuxCommitHash).zip
           echo 'Passed step 1'
           unzip linux-$(linuxCommitHash).zip
           echo 'Passed step 2'
