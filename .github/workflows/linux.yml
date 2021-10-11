@@ -19,5 +19,5 @@ jobs:
     - name: Download linux and unzip folder
       run: |
         linuxHash=$(git rev-parse HEAD:linux)
-        wget https://github.com/dejiezhen/linux/archive/$(linuxHash).zip
+        wget https://github.com/dejiezhen/linux/archive/${linuxHash}.zip
          
