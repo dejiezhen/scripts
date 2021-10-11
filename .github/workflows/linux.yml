@@ -12,6 +12,8 @@ jobs:
         steps:
             -name: Checkout major version of release
             uses: actions/checkout@v2
+            with:
+                  submodules: true
             
             -name: Install Dependencies
             run: ./install-deps.sh
@@ -21,5 +23,5 @@ jobs:
                 linuxCommitHash=$(git rev-parse HEAD:linux)
                 wget https://github.com/dejiezhen/linux/archive/${linuxCommitHash).zip
                 unzip linux-$(linuxCommitHash).zip
-                ./build-linux.sh linux-$linuxCommitHash) tinyconfig
+                ./build-linux.sh linux-$(linuxCommitHash) tinyconfig
             
